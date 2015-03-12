@@ -45,7 +45,7 @@ public class CommunicationEngine {
 			}
 			else
 			{
-				encrptedMsgByte = rsaEngine.encryptMSG(msg, pubKey);				
+				encrptedMsgByte = rsaEngine.encryptMSG(msg, pubKey);
 			}
 
 		} catch(Exception ex)
@@ -75,12 +75,12 @@ public class CommunicationEngine {
 			else if(isAsymetric)
 			{
 				byte[] deCryptedMsg = rsaEngine.decryptMSG(encrptedMsgByte);
-				System.out.println("After Asymetric decryption: "+new String(deCryptedMsg));				
+				System.out.println("After Asymetric decryption: "+new String(deCryptedMsg));
 			}
 			else //Symetric communication
 			{
 				byte[] deCryptedMsg = desEngine.decryptMSG(encrptedMsgByte,desSecretKey);
-				System.out.println("After symetric decryption: "+new String(deCryptedMsg));				
+				System.out.println("After symetric decryption: "+new String(deCryptedMsg));
 			}
 		}catch(Exception ex)
 		{
